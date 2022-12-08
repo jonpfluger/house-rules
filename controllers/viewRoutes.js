@@ -2,11 +2,6 @@ const router = require('express').Router();
 const { User, Review, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
-// boardgame reviews
-// card game reviews
-// video game reviews
-
-
 router.get('/', async (req, res) => {
   try {
     let boardGameReviews = await Review.findAll({
@@ -15,7 +10,6 @@ router.get('/', async (req, res) => {
       },
       include:[Category, User]
     });
-
     boardGameReviews = boardGameReviews.map((review) => review.get({ plain: true }));
     
     let cardGameReviews = await Review.findAll({
@@ -37,6 +31,63 @@ router.get('/', async (req, res) => {
     res.render('homepage', {
       boardGameReviews,
       cardGameReviews,
+      videoGameReviews,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/boardgame', withAuth, async (req, res) => {
+  try {
+    let boardGameReviews = await Review.findAll({
+      where: {
+        category_id: 1,
+      },
+      include:[Category, User]
+    });
+    boardGameReviews = boardGameReviews.map((review) => review.get({ plain: true }));
+    console.log(boardGameReviews)
+    res.render('boardgame', {
+      boardGameReviews,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/cardgame', withAuth, async (req, res) => {
+  try {
+    let cardGameReviews = await Review.findAll({
+      where: {
+        category_id: 2,
+      },
+      include:[Category, User]
+    });
+    cardGameReviews = cardGameReviews.map((review) => review.get({ plain: true }));
+    console.log(cardGameReviews)
+    res.render('cardgame', {
+      cardGameReviews,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/videogame', withAuth, async (req, res) => {
+  try {
+    let videoGameReviews = await Review.findAll({
+      where: {
+        category_id: 3,
+      },
+      include:[Category, User]
+    });
+    videoGameReviews = videoGameReviews.map((review) => review.get({ plain: true }));
+    console.log(videoGameReviews)
+    res.render('videogame', {
       videoGameReviews,
       logged_in: req.session.logged_in,
     });
