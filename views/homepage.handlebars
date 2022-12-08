@@ -1,10 +1,8 @@
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
-</div>
+{{#each reviews as |review| }}
+<div class="row align-center mb-5 text-light">
+  <p>Review Title: {{review.title}}</p>
+  <p>Game Title: {{review.gameTitle}}</p>
+  <p>Body: {{review.body}}</p>
+  <p>Date Created: {{review.date_created}}</p>
+</div>>
 {{/each}}
