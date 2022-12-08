@@ -7,21 +7,37 @@ const withAuth = require('../utils/auth');
 // video game reviews
 
 
-
 router.get('/', async (req, res) => {
   try {
-    const boardGameReviews = await Review.findAll({
+    let boardGameReviews = await Review.findAll({
       where: {
         category_id: 1,
       },
       include:[Category, User]
     });
-    console.log(boardGameReviews)
 
-    const users = userData.map((project) => project.get({ plain: true }));
-
+    boardGameReviews = boardGameReviews.map((review) => review.get({ plain: true }));
+    
+    let cardGameReviews = await Review.findAll({
+      where: {
+        category_id: 2,
+      },
+      include: [Category, User]
+    });
+    cardGameReviews = cardGameReviews.map((review) => review.get({ plain: true }));
+    
+    let videoGameReviews = await Review.findAll({
+      where: {
+        category_id: 3,
+      },
+      include: [Category, User]
+    });
+    videoGameReviews = videoGameReviews.map((review) => review.get({ plain: true }));
+    
     res.render('homepage', {
-      users,
+      boardGameReviews,
+      cardGameReviews,
+      videoGameReviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
