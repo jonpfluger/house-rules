@@ -1,17 +1,20 @@
 [
     {
-        "title": "test1",
-        "gameTitle": "test1",
-        "body": "test1"
+        "title": "Helicopter Roads",
+        "gameTitle": "Catan",
+        "body": "During the build Catan settlements part of setup, a player can 'helicopter' a road they already placed if another player places a settlement/road that blocks the route you were planning on using. This is only allowed during the build settlements part once the game is started players are no longer allowed to move their roads! #HOUSERULES",
+        "category_id": 1
     },
     {
         "title": "test2",
         "gameTitle": "test2",
-        "body": "test2"
+        "body": "test2",
+        "category_id": 2
     },
     {
         "title": "test3",
         "gameTitle": "test3",
-        "body": "test3"
+        "body": "test3",
+        "category_id": 3
     }
 ]

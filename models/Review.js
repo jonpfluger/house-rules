@@ -23,7 +23,7 @@ Review.init(
       type: DataTypes.STRING,
     },
     body: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     date_created: {
