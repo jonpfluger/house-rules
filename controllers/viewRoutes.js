@@ -1,13 +1,22 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Review, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+// boardgame reviews
+// card game reviews
+// video game reviews
+
+
+
+router.get('/', async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    const boardGameReviews = await Review.findAll({
+      where: {
+        category_id: 1,
+      },
+      include:[Category, User]
     });
+    console.log(boardGameReviews)
 
     const users = userData.map((project) => project.get({ plain: true }));
 
