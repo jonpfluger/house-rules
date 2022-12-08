@@ -6,6 +6,7 @@ const withAuth = require('../utils/auth');
 // card game reviews
 // video game reviews
 
+
 router.get('/', async (req, res) => {
   try {
     let boardGameReviews = await Review.findAll({
@@ -14,6 +15,7 @@ router.get('/', async (req, res) => {
       },
       include:[Category, User]
     });
+
     boardGameReviews = boardGameReviews.map((review) => review.get({ plain: true }));
     
     let cardGameReviews = await Review.findAll({
