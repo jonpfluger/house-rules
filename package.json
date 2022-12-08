@@ -1,7 +1,7 @@
 {
   "name": "user-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,10 +16,18 @@
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonpfluger/house-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonpfluger/house-rules/issues"
+  },
+  "homepage": "https://github.com/jonpfluger/house-rules#readme"
 }
