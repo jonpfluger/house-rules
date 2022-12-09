@@ -1,29 +1,56 @@
-<div class="container">
+<div class="row g-3">
 
 {{#each boardGameReviews as |review| }}
-<div class="row align-center mb-5 text-light">
-  <p>Review Title: {{review.title}}</p>
-  <p>Game Title: {{review.gameTitle}}</p>
-  <p>Body: {{review.body}}</p>
-  <p>Created by: {{review.user.name}} on {{review.date_created}}</p>
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card">
+    <div class="card-header bg-primary text-light">
+      <h5 class="card-title">{{review.title}}</h3>
+      <h6 class="card-subtitle">Game: {{review.gameTitle}}</h6>
+    </div>
+    <div class="card-body bg-info text-light">
+      <p class="card-text">{{review.body}}</p>
+        {{#if img}}
+          <img src="{{review.img}}" />
+        {{/if}}
+      <p class="card-text">Created by: {{review.user.name}} on {{review.date_created}}</p>
+    </div>
+  </div>
 </div>
 {{/each}}
 
 {{#each cardGameReviews as |review| }}
-<div class="row align-center mb-5 text-light">
-  <p>Review Title: {{review.title}}</p>
-  <p>Game Title: {{review.gameTitle}}</p>
-  <p>Body: {{review.body}}</p>
-  <p>Created by: {{review.user.name}} on {{review.date_created}}</p>
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card">
+    <div class="card-header bg-primary text-light">
+      <h5 class="card-title">{{review.title}}</h3>
+      <h6 class="card-subtitle">Game: {{review.gameTitle}}</h6>
+    </div>
+    <div class="card-body bg-info text-light">
+      <p class="card-text">{{review.body}}</p>
+        {{#if img}}
+          <img src="{{review.img}}" />
+        {{/if}}
+      <p class="card-text">Created by: {{review.user.name}} on {{review.date_created}}</p>
+    </div>
+  </div>
 </div>
 {{/each}}
 
 {{#each videoGameReviews as |review| }}
-<div class="row align-center mb-5 text-light">
-  <p>Review Title: {{review.title}}</p>
-  <p>Game Title: {{review.gameTitle}}</p>
-  <p>Body: {{review.body}}</p>
-  <p>Created by: {{review.user.name}} on {{review.date_created}}</p>
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card">
+    <div class="card-header bg-primary text-light">
+      <h5 class="card-title">{{review.title}}</h3>
+      <h6 class="card-subtitle">Game: {{review.gameTitle}}</h6>
+    </div>
+    <div class="card-body bg-info text-light">
+      <p class="card-text">{{review.body}}</p>
+        {{#if img}}
+          <img src="{{review.img}}" />
+        {{/if}}
+      <p class="card-text">Created by: {{review.user.name}} on {{review.date_created}}</p>
+    </div>
+  </div>
 </div>
 {{/each}}
 

@@ -18,3 +18,9 @@ nav {
 .btn {
     background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
 }
+
+#createBtn {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
