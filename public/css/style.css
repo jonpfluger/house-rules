@@ -1,0 +1,11 @@
+nav {
+    background-color: linear-gradient(rgb(145, 145, 255), rgb(53, 53, 255));
+}
+
+#logo {
+    max-height: 50px;
+}
+
+.nav-link {
+    font-weight: bolder;
+}
