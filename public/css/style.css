@@ -1,0 +1,20 @@
+:root {
+    --navbarcolor1: rgb(145, 145, 255);
+    --navbarcolor2: rgb(53, 53, 255);
+}
+
+nav {
+    background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
+}
+
+#logo {
+    max-height: 50px;
+}
+
+.nav-link {
+    font-weight: bolder;
+}
+
+.btn {
+    background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
+}
