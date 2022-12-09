@@ -1,0 +1,11 @@
+{{#each reviews}}
+  <div class="row align-center mb-5 text-light">
+    <p>Review Title: {{reviews.title}}</p>
+    <p>Game Title: {{reviews.gameTitle}}</p>
+    {{#if img}}
+        <img src="{{reviews.img}}" />
+    {{/if}}
+    <p>Body: {{reviews.body}}</p>
+    <p>Date Created: {{reviews.date_created}}</p>
+  </div>
+{{/each}}

@@ -1,5 +1,10 @@
+:root {
+    --navbarcolor1: rgb(145, 145, 255);
+    --navbarcolor2: rgb(53, 53, 255);
+}
+
 nav {
-    background-color: linear-gradient(rgb(145, 145, 255), rgb(53, 53, 255));
+    background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
 }
 
 #logo {
@@ -8,4 +13,8 @@ nav {
 
 .nav-link {
     font-weight: bolder;
+}
+
+.btn {
+    background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
 }
