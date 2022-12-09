@@ -29,9 +29,11 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/">Home</a>
           </li>
+          {{#if logged_in}}
           <li class="nav-item">
            <a class="nav-link" aria-current="page" href="/dashboard">Dashboard</a>
           </li>
+          {{/if}}
           <li class="nav-item">
            <a class="nav-link" aria-current="page" href="/boardgame">Board Games</a>
           </li>
@@ -41,6 +43,11 @@
           <li class="nav-item">
            <a class="nav-link" aria-current="page" href="/videogame">Video Games</a>
           </li>
+          {{#if logged_in}}
+          <li class="nav-item">
+           <a class="nav-link" aria-current="page" href="/create">New Post</a>
+          </li>
+          {{/if}}
           <li class="nav-item">
             {{#if logged_in}}
             <a class="nav-link" href="/logout" id="logout">Logout</a>
