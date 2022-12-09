@@ -9,11 +9,23 @@
         <input class="form-input" type="text" id="game-title" />
     </div>
     <div class="form-group">
-        <label for="post body">Body</label>
-        <input class="form-input" type="text" id="post-body" />
+        <label for="inlineFormCustomSelect">Categories</label>
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected disabled>Choose Category...</option>
+            <option value="1">Board Game</option>
+            <option value="2">Card Game</option>
+            <option value="3">Video Game</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="post body">Content</label>
+        <textarea type="text" class="form-control" name="content"></textarea>
     </div>
     <div class="form-group">
         <label for="exampleFormControlFile1">Image</label>
         <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>
