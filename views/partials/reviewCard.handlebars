@@ -1,0 +1,13 @@
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+          <h5 class="card-title">{{this.title}}</h3>
+          <h6 class="card-subtitle">Game: {{this.gameTitle}}</h6>
+        </div>
+        <div class="card-body bg-info text-light">
+          <p class="card-text">{{this.body}}</p>
+            {{#if img}}
+              <img src="{{this.img}}" />
+            {{/if}}
+          <p class="card-text">Created by: {{this.user.name}} on {{this.date_created}}</p>
+        </div>
+      </div>
