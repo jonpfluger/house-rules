@@ -1,16 +1,16 @@
 <h2>Create Post</h2>
-<form class="form post-form">
+<form id="createPost" class="form post-form">
     <div class="form-group">
-        <label for="post review title">Post Title</label>
-        <input class="form-input" type="text" id="review-title" />
+        <label for="reviewTitle">Post Title</label>
+        <input class="form-input" type="text" id="reviewTitle" />
     </div>
     <div class="form-group">
-        <label for="post game title">Game Title</label>
-        <input class="form-input" type="text" id="game-title" />
+        <label for="gameTitle">Game Title</label>
+        <input class="form-input" type="text" id="gameTitle" />
     </div>
     <div class="form-group">
-        <label for="inlineFormCustomSelect">Categories</label>
-        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <label for="category">Categories</label>
+        <select class="custom-select mr-sm-2" id="category">
             <option selected disabled>Choose Category...</option>
             <option value="1">Board Game</option>
             <option value="2">Card Game</option>
@@ -18,14 +18,16 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="post body">Content</label>
-        <textarea type="text" class="form-control" name="content"></textarea>
+        <label for="body">Content</label>
+        <textarea id="body" type="text" class="form-control" name="body"></textarea>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlFile1">Image</label>
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        <label for="image">Image</label>
+        <input type="file" class="form-control-file" id="image">
     </div>
     <div class="col-auto my-1">
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>
+
+ <script src="/js/create.js"></script>
