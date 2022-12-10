@@ -9,6 +9,12 @@ nav {
 
 #logo {
     max-height: 50px;
+    
+}
+
+navbar {
+    justify-content: center;
+     
 }
 
 .nav-link {
