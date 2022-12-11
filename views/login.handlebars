@@ -1,37 +1,47 @@
-<h2>Login</h2>
+<div class="row justify-content-evenly mt-4">
+  {{!-- login --}}
+  <div class="col-sm-5 px-0 pb-2 mb-4 border border-dark border-3 text-center">
+    <h2 class="bg-dark text-light text-center p-2 w-100">Login</h2>
 
-<form class="form login-form">
-  <div class="form-group">
-    <label for="email-login">email:</label>
-    <input class="form-input" type="text" id="email-login" />
+    <form class="form login-form" id="login">
+      <div class="form-group mb-3 mx-2 text-start text-light">
+        <label for="email-login" class="form-label">Email:</label>
+        <input class="form-control" type="text" id="email-login" name="email-login" />
+      </div>
+      <div class="form-group mb-3 mx-2 text-start text-light">
+        <label for="password-login" class="form-label">Password:</label>
+        <input class="form-control" type="password" id="password-login" name="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Log In</button>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-login" />
-  </div>
-  <div class="form-group">
-    <button class="btn" type="submit">login</button>
-  </div>
-</form>
 
-<h2>Sign Up</h2>
+  {{!-- signup --}}
+  <div class="col-sm-5 px-0 pb-2 mb-4 border border-dark border-3 text-center">
+    <h2 class="bg-dark text-light text-center p-2 w-100">Sign Up</h2>
 
-<form class="form signup-form">
-  <div class="form-group">
-    <label for="email-signup">username:</label>
-    <input class="form-input" type="text" id="username-signup" />
+    <form class="form signup-form" id="signup">
+      <div class="form-group mb-3 mx-2 text-start text-light">
+        <label for="username-signup" class="form-label">Username:</label>
+        <input class="form-control" type="text" id="username-signup" name="username-signup" />
+      </div>
+      <div class="form-group mb-3 mx-2 text-start text-light">
+        <label for="email-signup" class="form-label">Email:</label>
+        <input class="form-control" type="text" id="email-signup" name="email-signup"/>
+      </div>
+      <div class="form-group mb-3 mx-2 text-start text-light">
+        <label for="password-signup" class="form-label">Password:</label>
+        <input class="form-control" type="password" id="password-signup" name="password-signup"/>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="email-signup">email:</label>
-    <input class="form-input" type="text" id="email-signup" />
-  </div>
-  <div class="form-group">
-    <label for="password-signup">password:</label>
-    <input class="form-input" type="password" id="password-signup" />
-  </div>
-  <div class="form-group">
-    <button class="btn" type="submit">signup</button>
-  </div>
-</form>
+</div>
+
+
 
 <script src="/js/login.js"></script>
