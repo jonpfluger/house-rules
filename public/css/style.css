@@ -3,6 +3,10 @@
     --navbarcolor2: rgb(53, 53, 255);
 }
 
+body {
+    margin: 0;
+}
+
 nav {
     background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
 }
@@ -12,10 +16,6 @@ nav {
     
 }
 
-navbar {
-    justify-content: center;
-     
-}
 
 .nav-link {
     font-weight: bolder;
