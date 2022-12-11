@@ -16,5 +16,23 @@
         "gameTitle": "Apex Legends",
         "body": "As season 15 is underway the new battle royale map has become war zone for all. New Moon has the size of Kings Canyon but so much more terrain for you or an enemy to camp out, waiting for the next victim. Each part of the map creates interesting battlefields for all, with great loot to save you from your inevitable death. Both normal and Ranked lobbies have their sweats, but with a new map it can level the playing field for the smartest strategist. Hope all are ready and excited to load in and catch a dub.",
         "category_id": 3
+    },
+    {
+        "title": "Viking Adventures Await!",
+        "gameTitle": "Valheim",
+        "body": "Have you ever wanted to slay beasts and bosses, build everything from huts to fortesses, explore and survive a somewhat blocky but still beautiful sandbox world, with some required foraging and gardening on the side? Valheim checks all these boxes and more. Play alone or with up to ten friends",
+        "category_id": 3
+    },
+    {
+        "title": "Peel Bananas! Peel Peel Bananas!",
+        "gameTitle": "Bananagrams",
+        "body": "This speedy tile-based word game is compact and fun! Create your own ever-changing crossword as quickly as possible forcing your panicked opponents to draw tile after tile until the bunch is empty! First person to use all their tiles wins. Play with up to 7 of your friends.",
+        "category_id": 1
+    },
+    {
+        "title": "Prepare to be Skunked",
+        "gameTitle": "Cribbage",
+        "body": "A classic card game for anyone with a standard 52-card deck who can count to 31 or 121 if you lack a board and pegs. Create the optimal hand and outpeg your opponent while trying to predict their next move. Can be played with up to 5 people, with teams for 4 and 6-player games.",
+        "category_id": 2
     }
 ]
