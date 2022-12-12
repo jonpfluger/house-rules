@@ -3,7 +3,7 @@
         <div class="card-header navbar-dark bg-dark d-flex justify-content-between align-items-center">
             <h2>Create Post</h2>
         </div>
-        <div class="card-body text-center bg-primary bg-opacity-75 w-100 m-auto p-auto">
+        <div class="card-body text-center bg-primary bg-opacity-75 w-100 m-auto px-2 py-auto">
             <form id="createPost" class="form post-form">
                 <div class="form-group mb-3 mx-2 text-start text-light">
                     <label for="reviewTitle" class="form-label">Post Title</label>
@@ -17,8 +17,8 @@
                     <label for="body" class="form-label">Content</label>
                     <textarea id="body" type="text" class="form-control" name="body"></textarea>
                 </div>
-                <div class="d-flex justify-content-between">
-                    <div class="form-group mb-3 ms-5 text-start text-light">
+                <div id="categoryImageDiv" class="d-flex justify-content-between flex-wrap">
+                    <div class="form-group mb-3 ms-2 mx-sm-5 text-start text-light">
                         <label for="category" class="form-label">Categories</label>
                         <br>
                         <select class="custom-select mr-sm-2" id="category" name="category">
@@ -28,14 +28,14 @@
                             <option value="3">Video Game</option>
                         </select>
                     </div>
-                    <div class="form-group ps-5 text-start">
+                    <div class="form-group mb-3 ms-2 ps-sm-5 text-start">
                         <label for="image" class="form-label">Image</label>
                         <br>
-                        <input type="file" class="form-control-file" id="image">
+                        <input type="file" class="form-control-file w-100" id="image">
                     </div>
                 </div>
                 <div class="col-12 my-1 text-center">
-                <button type="submit" class="btn btn-primary col-2">Submit</button>
+                <button type="submit" class="btn btn-primary col-sm-2">Submit</button>
                 </div>
             </form>
         </div>
