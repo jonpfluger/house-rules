@@ -7,12 +7,12 @@ body {
     margin: 0;
 }
 
-nav {
+header {
     background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
 }
 
 #logo {
-    max-height: 50px;
+    max-height: 100px;
     
 }
 
