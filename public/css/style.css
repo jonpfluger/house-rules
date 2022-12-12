@@ -25,7 +25,6 @@ header {
 }
 
 .myCustomCard {
-    /* background-color: rgb(107, 107, 107); */
     background-image: linear-gradient(rgb(150, 255, 255), rgb(4, 167, 167));
 }
 
