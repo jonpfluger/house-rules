@@ -16,11 +16,31 @@ header {
     
 }
 
-
 .nav-link {
     font-weight: bolder;
 }
 
 .btn {
     background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
+}
+
+.myCustomCard {
+    /* background-color: rgb(107, 107, 107); */
+    background-image: linear-gradient(rgb(150, 255, 255), rgb(4, 167, 167));
+}
+
+.cardHeader {
+    background-image: linear-gradient(var(--navbarcolor2), var(--navbarcolor1));
+    margin-bottom: 0;
+    border-bottom: 2px var(--navbarcolor1) solid;
+}
+
+.myCardTitle {
+    color: rgb(0, 255, 81)
+}
+
+.myCustomCardBody {
+    background-image: linear-gradient(rgb(195, 134, 238), rgb(145, 71, 197));
+    border: 5px rgb(190, 99, 255) solid;
+    border-radius: 10px 0 0 10px;
 }
