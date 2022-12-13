@@ -1,4 +1,17 @@
 const editReview = document.getElementById('editPost')
+const categorySelect = document.getElementById("category").options
+const categoryId = document.getElementById("categoryId")
+
+window.addEventListener("load", (event) => {
+  let categoryid = categoryId.dataset.categoryid
+  
+  for (let i = 0; i < categorySelect.length; i++) {
+    if (categorySelect[i].value === categoryid) {
+      categorySelect[i].selected = true
+    }
+  }
+
+})
 
 const handleSubmit = (event) => {
   event.preventDefault()
@@ -28,6 +41,12 @@ const handleSubmit = (event) => {
     },
     body: JSON.stringify(updatedPost)
   })
+  .then(response => {
+    if (response.status === 200) {
+      window.location.href = '/dashboard'
+    }
+  })
+  .catch(err => console.log(err))
 }
 
 editReview.addEventListener('submit', handleSubmit)
