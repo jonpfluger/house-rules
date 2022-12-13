@@ -1,3 +1,5 @@
+const modal = new bootstrap.Modal(document.getElementById('modal'))
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -17,7 +19,10 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      const json = await response.json()
+      console.log(json)
+      document.querySelector('.modal-body p').innerText = json.message
+      modal.show()
     }
   }
 };
@@ -39,7 +44,13 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      const json = await response.json()
+      console.log(json)
+      if(json.errors) {
+        const errorMsg = json.errors.map(err => err.message).join('\n')
+        document.querySelector('.modal-body p').innerText = errorMsg
+        modal.show()
+      }
     }
   }
 };
