@@ -5,6 +5,24 @@
   <div class="card">
     {{> reviewCard }}
     <p id="categoryTitle">{{category.title}}</p>
+
+  </div>
+</div>
+{{/each}}
+
+{{#each cardGameReviews as |review| }}
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark">
+{{> reviewCard }}
+  </div>
+</div>
+{{/each}}
+
+{{#each videoGameReviews as |review| }}
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card">
+{{> reviewCard }}
+
   </div>
 </div>
 {{/each}}
