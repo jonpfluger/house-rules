@@ -4,5 +4,5 @@ module.exports = {
         const year = date.getFullYear()
         const day = date.getDate()
         return `${month}/${day}/${year}`
-    }
+    },
 };
