@@ -44,7 +44,7 @@ header {
     border-radius: 10px 0 0 10px;
 }
 
-#categoryTitle {
+#cardFooter {
     background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
     margin-bottom: 0;
     font-size: 18px;
