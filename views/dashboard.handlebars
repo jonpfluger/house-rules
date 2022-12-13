@@ -2,7 +2,11 @@
   {{#each reviews as |review| }}
     <div class="col-12 col-md-6 col-lg-4">
       {{> reviewCard }}
-      <p id="categoryTitle">{{category.title}}</p>
+      <div id="cardFooter" class="d-inline-flex w-100 justify-content-around py-2">
+        <a href="/edit">✎</a>
+        <p id="categoryTitle" class="my-0">{{category.title}}</p>
+        <a>❌</a>
+      </div>
     </div>
   {{/each}}
 </div>
