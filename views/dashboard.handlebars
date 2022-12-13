@@ -3,10 +3,12 @@
     <div class="col-12 col-md-6 col-lg-4">
       {{> reviewCard }}
       <div id="cardFooter" class="d-inline-flex w-100 justify-content-around py-2">
-        <a href="/edit">✎</a>
+        <a href="/edit/{{id}}">✎</a>
         <p id="categoryTitle" class="my-0">{{category.title}}</p>
-        <a>❌</a>
+        <a id="delete" href="/dashboard">❌</a>
       </div>
     </div>
   {{/each}}
 </div>
+
+<script src="/js/delete.js"></script>
