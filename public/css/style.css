@@ -43,3 +43,10 @@ header {
     border: 5px rgb(190, 99, 255) solid;
     border-radius: 10px 0 0 10px;
 }
+
+#categoryTitle {
+    background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
+    margin-bottom: 0;
+    font-size: 18px;
+    border-top: 2px var(--navbarcolor1) solid;
+}
