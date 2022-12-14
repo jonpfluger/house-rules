@@ -1,16 +1,18 @@
 <div class="row g-3">
 
-{{#each boardGameReviews as |review| }}
+{{#each reviews}}
 <div class="col-12 col-md-6 col-lg-4">
   <div class="card">
-{{> reviewCard }}
+    {{> reviewCard }}
+    <p id="cardFooter">{{category.title}}</p>
+
   </div>
 </div>
 {{/each}}
 
 {{#each cardGameReviews as |review| }}
 <div class="col-12 col-md-6 col-lg-4">
-  <div class="card">
+  <div class="card bg-dark">
 {{> reviewCard }}
   </div>
 </div>
@@ -20,6 +22,7 @@
 <div class="col-12 col-md-6 col-lg-4">
   <div class="card">
 {{> reviewCard }}
+
   </div>
 </div>
 {{/each}}

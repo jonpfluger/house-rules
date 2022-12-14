@@ -2,36 +2,17 @@ const router = require('express').Router();
 const { User, Review, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
+// homepage
 router.get('/', async (req, res) => {
   try {
-    let boardGameReviews = await Review.findAll({
-      where: {
-        category_id: 1,
-      },
-      include: [Category, User]
-    });
-    boardGameReviews = boardGameReviews.map((review) => review.get({ plain: true }));
-
-    let cardGameReviews = await Review.findAll({
-      where: {
-        category_id: 2,
-      },
-      include: [Category, User]
-    });
-    cardGameReviews = cardGameReviews.map((review) => review.get({ plain: true }));
-
-    let videoGameReviews = await Review.findAll({
-      where: {
-        category_id: 3,
-      },
-      include: [Category, User]
-    });
-    videoGameReviews = videoGameReviews.map((review) => review.get({ plain: true }));
+    let reviews = await Review.findAll({
+      include: [Category, User],
+      order: [['date_created', 'DESC']]
+    })
+    reviews = reviews.map(review => review.get({plain: true}))
 
     res.render('homepage', {
-      boardGameReviews,
-      cardGameReviews,
-      videoGameReviews,
+      reviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -39,6 +20,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// board games
 router.get('/boardgame', withAuth, async (req, res) => {
   try {
     let boardGameReviews = await Review.findAll({
@@ -48,7 +30,7 @@ router.get('/boardgame', withAuth, async (req, res) => {
       include: [Category, User]
     });
     boardGameReviews = boardGameReviews.map((review) => review.get({ plain: true }));
-    console.log(boardGameReviews)
+
     res.render('boardgame', {
       boardGameReviews,
       logged_in: req.session.logged_in,
@@ -58,6 +40,7 @@ router.get('/boardgame', withAuth, async (req, res) => {
   }
 });
 
+// card games
 router.get('/cardgame', withAuth, async (req, res) => {
   try {
     let cardGameReviews = await Review.findAll({
@@ -67,7 +50,7 @@ router.get('/cardgame', withAuth, async (req, res) => {
       include: [Category, User]
     });
     cardGameReviews = cardGameReviews.map((review) => review.get({ plain: true }));
-    console.log(cardGameReviews)
+   
     res.render('cardgame', {
       cardGameReviews,
       logged_in: req.session.logged_in,
@@ -77,6 +60,7 @@ router.get('/cardgame', withAuth, async (req, res) => {
   }
 });
 
+// video games
 router.get('/videogame', withAuth, async (req, res) => {
   try {
     let videoGameReviews = await Review.findAll({
@@ -86,7 +70,7 @@ router.get('/videogame', withAuth, async (req, res) => {
       include: [Category, User]
     });
     videoGameReviews = videoGameReviews.map((review) => review.get({ plain: true }));
-    console.log(videoGameReviews)
+   
     res.render('videogame', {
       videoGameReviews,
       logged_in: req.session.logged_in,
@@ -96,6 +80,7 @@ router.get('/videogame', withAuth, async (req, res) => {
   }
 });
 
+// dashboard
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     let reviews = await Review.findAll({
@@ -105,6 +90,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       include: [User, Category]
     })
     reviews = reviews.map(review => review.get({ plain: true }))
+
     res.render('dashboard', {
       reviews,
       logged_in: req.session.logged_in,
@@ -114,7 +100,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-//User Info for create post
+// create post
 router.get('/create', withAuth, async (req, res) => {
   try {
     let user = await User.findOne({
@@ -123,6 +109,7 @@ router.get('/create', withAuth, async (req, res) => {
       }
      })
     user = user.get({ plain: true })
+
     res.render('createview', {
       user,
       logged_in: req.session.logged_in,
@@ -132,6 +119,25 @@ router.get('/create', withAuth, async (req, res) => {
   }
 })
 
+// edit view
+router.get('/edit/:id', withAuth, async (req, res) => {
+  try {
+    let review = await Review.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [User, Category]
+     })
+    review = review.get({ plain: true })
+    
+    res.render('editview', {
+      review,
+      logged_in: req.session.logged_in,
+    })
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
 
 
 router.get('/login', (req, res) => {
