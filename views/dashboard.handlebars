@@ -1,12 +1,12 @@
 <div id="dashboard" class="row g-3">
-  {{#each reviews as |review| }}
+  {{#each reviews as |review|}}
     <div class="col-12 col-md-6 col-lg-4">
-      {{> reviewCard }}
-      <div id="cardFooter" class="d-inline-flex w-100 justify-content-around py-2">
+      {{>reviewCard }}
+      {{!-- <div id="cardFooter" class="d-inline-flex w-100 justify-content-around py-2">
         <a href="/edit/{{id}}">✎</a>
         <p id="categoryTitle" class="my-0">{{category.title}}</p>
         <button class="border-0 bg-transparent" id="delete" data-reviewid="{{id}}">❌</button>
-      </div>
+      </div> --}}
     </div>
   {{/each}}
 </div>

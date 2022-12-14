@@ -2,10 +2,8 @@
 
 {{#each reviews}}
 <div class="col-12 col-md-6 col-lg-4">
-  <div class="card">
+  <div class="card bg-dark">
     {{> reviewCard }}
-    <p id="cardFooter">{{category.title}}</p>
-
   </div>
 </div>
 {{/each}}
@@ -20,9 +18,8 @@
 
 {{#each videoGameReviews as |review| }}
 <div class="col-12 col-md-6 col-lg-4">
-  <div class="card">
+  <div class="card bg-dark">
 {{> reviewCard }}
-
   </div>
 </div>
 {{/each}}

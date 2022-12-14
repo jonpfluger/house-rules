@@ -29,7 +29,13 @@ router.get('/boardgame', withAuth, async (req, res) => {
       },
       include: [Category, User]
     });
-    boardGameReviews = boardGameReviews.map((review) => review.get({ plain: true }));
+    boardGameReviews = boardGameReviews.map(review => {
+      return {
+        ...review.get({ plain: true }),
+        logged_in: req.session.logged_in
+      }
+    })
+    
 
     res.render('boardgame', {
       boardGameReviews,
@@ -49,8 +55,13 @@ router.get('/cardgame', withAuth, async (req, res) => {
       },
       include: [Category, User]
     });
-    cardGameReviews = cardGameReviews.map((review) => review.get({ plain: true }));
-   
+    cardGameReviews = cardGameReviews.map(review => {
+      return {
+        ...review.get({ plain: true }),
+        logged_in: req.session.logged_in
+      }
+    })
+    
     res.render('cardgame', {
       cardGameReviews,
       logged_in: req.session.logged_in,
@@ -69,7 +80,13 @@ router.get('/videogame', withAuth, async (req, res) => {
       },
       include: [Category, User]
     });
-    videoGameReviews = videoGameReviews.map((review) => review.get({ plain: true }));
+    videoGameReviews = videoGameReviews.map(review => {
+      return {
+        ...review.get({ plain: true }),
+        logged_in: req.session.logged_in
+      }
+    })
+    
    
     res.render('videogame', {
       videoGameReviews,
@@ -89,7 +106,13 @@ router.get('/dashboard', withAuth, async (req, res) => {
       },
       include: [User, Category]
     })
-    reviews = reviews.map(review => review.get({ plain: true }))
+    reviews = reviews.map(review => {
+      
+      return {
+        ...review.get({ plain: true }),
+        logged_in: req.session.logged_in
+      }
+    })
 
     res.render('dashboard', {
       reviews,
