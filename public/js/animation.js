@@ -1,6 +1,5 @@
 let headerAnimationsComplete = sessionStorage.getItem('headerAnimationsComplete')
 
-
 document.addEventListener('DOMContentLoaded', () => {
     if(!headerAnimationsComplete){
             sessionStorage.setItem('headerAnimationsComplete', true)
