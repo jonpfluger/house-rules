@@ -16,13 +16,4 @@
       </div>
     </div>
   </div>
-{{#if logged_in}}
-<div id="cardFooter" class="d-inline-flex w-100 justify-content-around py-2">
-  <a href="/edit/{{id}}">✎</a>
-  <p id="categoryTitle" class="my-0">{{category.title}}</p>
-  <button class="border-0 bg-transparent" id="delete" data-reviewid="{{id}}">❌</button>
-</div>
-{{else}}
-<div class="footer bg-dark" id="cardFooter">{{category.title}}</div>
-{{/if}}
 </div>
