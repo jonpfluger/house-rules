@@ -44,9 +44,14 @@ header {
     border-radius: 10px 0 0 10px;
 }
 
-#cardFooter {
+#cardFooter, #createBody, #editBody {
     background-image: linear-gradient(var(--navbarcolor1), var(--navbarcolor2));
     margin-bottom: 0;
     font-size: 18px;
     border-top: 2px var(--navbarcolor1) solid;
+}
+
+#createHeader, #editHeader {
+    background-image: linear-gradient(rgb(145, 71, 197), rgb(195, 134, 238));
+    border-bottom: 5px rgb(190, 99, 255) solid;
 }

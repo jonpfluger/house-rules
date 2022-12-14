@@ -1,30 +1,11 @@
 <div class="row g-3">
 
 {{#each reviews}}
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card">
+<div class="col-12 col-md-6 col-lg-4 animatedCard">
+  <div class="card border-0 bg-dark">
     {{> reviewCard }}
-    <p id="cardFooter">{{category.title}}</p>
-
+    <div id="cardFooter">{{category.title}}</div>
   </div>
 </div>
 {{/each}}
-
-{{#each cardGameReviews as |review| }}
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card bg-dark">
-{{> reviewCard }}
-  </div>
-</div>
-{{/each}}
-
-{{#each videoGameReviews as |review| }}
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card">
-{{> reviewCard }}
-
-  </div>
-</div>
-{{/each}}
-
 </div>
