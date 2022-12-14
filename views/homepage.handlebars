@@ -4,24 +4,8 @@
 <div class="col-12 col-md-6 col-lg-4">
   <div class="card bg-dark">
     {{> reviewCard }}
+    <div id="cardFooter">{{category.title}}</div>
   </div>
 </div>
 {{/each}}
-
-{{#each cardGameReviews as |review| }}
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card bg-dark">
-{{> reviewCard }}
-  </div>
-</div>
-{{/each}}
-
-{{#each videoGameReviews as |review| }}
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card bg-dark">
-{{> reviewCard }}
-  </div>
-</div>
-{{/each}}
-
 </div>
