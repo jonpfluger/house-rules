@@ -27,7 +27,8 @@ router.get('/boardgame', withAuth, async (req, res) => {
       where: {
         category_id: 1,
       },
-      include: [Category, User]
+      include: [Category, User],
+      order: [['date_created', 'DESC']]
     });
     boardGameReviews = boardGameReviews.map(review => {
       return {
@@ -53,7 +54,8 @@ router.get('/cardgame', withAuth, async (req, res) => {
       where: {
         category_id: 2,
       },
-      include: [Category, User]
+      include: [Category, User],
+      order: [['date_created', 'DESC']]
     });
     cardGameReviews = cardGameReviews.map(review => {
       return {
@@ -78,7 +80,8 @@ router.get('/videogame', withAuth, async (req, res) => {
       where: {
         category_id: 3,
       },
-      include: [Category, User]
+      include: [Category, User],
+      order: [['date_created', 'DESC']]
     });
     videoGameReviews = videoGameReviews.map(review => {
       return {
