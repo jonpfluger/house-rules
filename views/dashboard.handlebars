@@ -3,7 +3,7 @@
     <div class="col-12 col-md-6 col-lg-4 animatedCard">
       {{>reviewCard }}
       <div id="cardFooter" class="d-inline-flex w-100 justify-content-around py-2">
-        <a href="/edit/{{id}}">✎</a>
+        <a class="text-decoration-none text-reset" href="/edit/{{id}}">✎</a>
         <p id="categoryTitle" class="my-0">{{category.title}}</p>
         <button class="border-0 bg-transparent" id="delete" data-reviewid="{{id}}">❌</button>
       </div>
