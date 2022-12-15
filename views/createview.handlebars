@@ -7,11 +7,11 @@
             <form id="createPost" class="form post-form">
                 <div class="form-group mb-3 mx-2 text-start text-light">
                     <label for="reviewTitle" class="form-label">Post Title</label>
-                    <input class="form-control" type="text" id="reviewTitle" name="reviewTitle"/>
+                    <input class="form-control" type="text" id="reviewTitle" name="reviewTitle" />
                 </div>
                 <div class="form-group mb-3 mx-2 text-start text-light">
                     <label for="gameTitle" class="form-label">Game Title</label>
-                    <input class="form-control" type="text" id="gameTitle" name="gameTitle"/>
+                    <input class="form-control" type="text" id="gameTitle" name="gameTitle" />
                 </div>
                 <div class="form-group mb-3 mx-2 text-start text-light">
                     <label for="body" class="form-label">Content</label>
@@ -29,17 +29,27 @@
                         </select>
                     </div>
                     <div class="form-group mb-3 ms-2 ps-sm-5 text-start">
-                        <label for="image" class="form-label">Image</label>
+                        {{#if img}}
+                            <img src="{{this.img}}" class="img-fluid rounded-start" alt="game img">
+                        {{/if}}    
+                        <input name="game-img" placeholder="Upload image here" />
+                        <button id="upload_widget" class="cloudinary_button">Upload image</button>
+
+                        {{!-- <label for="image" class="form-label">Image</label>
                         <br>
-                        <input type="file" class="form-control-file w-100" id="image">
+                        <input type="file" class="form-control-file w-100" id="image"> --}}
                     </div>
                 </div>
                 <div class="col-12 my-1 text-center">
-                <button type="submit" class="btn btn-primary col-sm-2">Submit</button>
+                    <button type="submit" class="btn btn-primary col-sm-2">Submit</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
- <script src="/js/create.js"></script>
+<!-- https://cloudinary.com/documentation/upload_widget -->
+
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script src="/js/cloud.js"></script>
+<script src="/js/create.js"></script>
