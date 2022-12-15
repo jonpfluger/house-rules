@@ -34,5 +34,23 @@
         "gameTitle": "Cribbage",
         "body": "A classic card game for anyone with a standard 52-card deck who can count to 31 or 121 if you lack a board and pegs. Create the optimal hand and outpeg your opponent while trying to predict their next move. Can be played with up to 5 people, with teams for 4 and 6-player games.",
         "category_id": 2
+    },
+    {
+        "title": "MTG",
+        "gameTitle": "Magic: The Gathering",
+        "body": "MTG is such a versatile game. You can really get creative and come up with new and interesting ways for the cards to interact with each other. You can go aggro with big beefy monsters, or go control where you set the pace of battle by preventing your opponents from doing things. This game benefits greatly in a social setting. Play with friends or in local communities.",
+        "category_id": 2
+    },
+    {
+        "title": "Risky Business",
+        "gameTitle": "Risk",
+        "body": "By far the best strategy in traditional RISK is to go for Australia. If you can get it early on very quickly, which isn't hard to do, you can start getting bonus armies on every turn long before others. You can bulk them up and go on a rampage, and you will always be able to defend Australia.",
+        "category_id": 1
+    },
+    {
+        "title": "O Elden Ring",
+        "gameTitle": "Elden Ring",
+        "body": "This game is very challenging and rewarding. It plays like Dark Souls, but FromSoft tweaked their formula for a massive open world, and it is new and refreshing. The game also allows for multiplayer functionality, so you can traverse with friends. Though if you do partake in jolly cooperation, watch out for invaders.",
+        "category_id": 3
     }
 ]
