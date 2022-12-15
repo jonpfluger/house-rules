@@ -104,7 +104,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id
       },
-      include: [User, Category]
+      include: [User, Category],
+      order: [['date_created', 'DESC']]
     })
     reviews = reviews.map(review => {
       
