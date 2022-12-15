@@ -18,4 +18,8 @@ Given a game review website, when I log in, then I can interact with other users
 
 ![A gaming webpage with a dark background and colorful navbar and posts.](public/assets/screenshot.png)
 
-## Link
+## Links
+
+Deployed Link:
+
+Presentation: https://docs.google.com/presentation/d/1CHc1Q7ntHHWNfLuI-1sv-Sn-X3qNnjtFyks-oEAXKpg/edit#slide=id.p
