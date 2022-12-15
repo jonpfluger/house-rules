@@ -20,6 +20,6 @@ Given a game review website, when I log in, then I can interact with other users
 
 ## Links
 
-Deployed Link:
+Deployed Link: https://house-rules.herokuapp.com/
 
 Presentation: https://docs.google.com/presentation/d/1CHc1Q7ntHHWNfLuI-1sv-Sn-X3qNnjtFyks-oEAXKpg/edit#slide=id.p
