@@ -12,65 +12,68 @@
   <script src="/api/animation/anime.min.js"></script>
 </head>
 
-<body class="bg-dark">
-  <div class="bg-dark text-light">
-    <header class="blog-header mb-3 py-3">
-      <div class="container">
-        <div class="text-center blog-header-logo text-dark" href="#">
-          <img class="img-fluid mx-auto" id="logo" src="/assets/logo1.png" alt="House Rules logo"></a>
+<body class="bg-dark text-light">
+  <header class="blog-header mb-3 py-3">
+    <div class="container">
+      <div class="text-center blog-header-logo text-dark" href="#">
+        <img class="img-fluid mx-auto" id="logo" src="/assets/logo1.png" alt="House Rules logo"></a>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="align-items-center mx-auto">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fs-5" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="/">Home</a>
+            </li>
+            {{#if logged_in}}
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="/dashboard">Dashboard</a>
+            </li>
+            {{/if}}
+            <li class="nav-item" >
+              <a class="nav-link mx-2" aria-current="page" href="/boardgame" id="boardBtn">Board Games</a>
+            </li>
+            <li class="nav-item cardBtn">
+              <a class="nav-link mx-2" aria-current="page" href="/cardgame" id="cardBtn">Card Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="/videogame" id="videoBtn">Video Games</a>
+            </li>
+            {{#if logged_in}}
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="/create">New Post</a>
+            </li>
+            {{/if}}
+            <li class="nav-item">
+              {{#if logged_in}}
+              <a class="nav-link mx-2" href="/logout" id="logout">Logout</a>
+              {{else}}
+              <a class="nav-link mx-2" href="/login">Log in</a>
+              {{/if}}
+            </li>
+          </ul>
         </div>
       </div>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="align-items-center mx-auto">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse fs-5" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="/">Home</a>
-              </li>
-              {{#if logged_in}}
-              <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="/dashboard">Dashboard</a>
-              </li>
-              {{/if}}
-              <li class="nav-item" >
-                <a class="nav-link mx-2" aria-current="page" href="/boardgame" id="boardBtn">Board Games</a>
-              </li>
-              <li class="nav-item cardBtn">
-                <a class="nav-link mx-2" aria-current="page" href="/cardgame" id="cardBtn">Card Games</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="/videogame" id="videoBtn">Video Games</a>
-              </li>
-              {{#if logged_in}}
-              <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="/create">New Post</a>
-              </li>
-              {{/if}}
-              <li class="nav-item">
-                {{#if logged_in}}
-                <a class="nav-link mx-2" href="/logout" id="logout">Logout</a>
-                {{else}}
-                <a class="nav-link mx-2" href="/login">Log in</a>
-                {{/if}}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    </nav>
+  </header>
 
-    <main class="container text-center">
-      {{{body}}}
-    </main>
+  <main class="container text-center">
+    {{{body}}}
+  </main>
 
-    {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
-    <script src="/js/animation.js" ></script>
+  <footer class="m-5 text-center text-primary">
+    © 12/14/2022 Jon Pfluger, Jennifer Kiesler, Christopher Mclaughlin, James Andritsch, Shanice Zupan
+  </footer>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+  <script src="/js/animation.js" ></script>
 </body>
 
 </html>
