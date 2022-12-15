@@ -16,7 +16,7 @@ const handleSubmit = (event) => {
     gameTitle: gameTitleInput.value,
     category_id: categorySelection.value,
     body: bodyInput.value,
-    img: imageUpload.value
+    img: imgUrl
   }
 
   fetch('/api/review', {

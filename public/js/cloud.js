@@ -1,15 +1,7 @@
-// require("dotenv").config();
-
-// const cloudinary = require("cloudinary").v2;
-
-// console.log(cloudinary.config().cloud_name);
-
-// cloudinary.uploader
-//     .upload()
-
+let imgUrl = ''
 
 const uploadUrlInput = document.querySelector('[name="game-photo"]')
-    const uploadWidgetButton = document.getElementById("upload_widget")
+const uploadWidgetButton = document.getElementById("upload_widget")
 
     var myWidget = cloudinary.createUploadWidget({
         cloudName: "dih7bmipw",
@@ -18,12 +10,13 @@ const uploadUrlInput = document.querySelector('[name="game-photo"]')
         (error, result) => {
             if (!error && result && result.event === "success") {
                 console.log("Done! Here is the image info: ", result.info);
-                uploadUrlInput.value = result.info.secure_url
-                uploadWidgetButton.style.display = 'none'
+                imgUrl = result.info.url
+                uploadWidgetButton.style.display = 'block'
             }
         }
     );
 
-    uploadWidgetButton.addEventListener("click", function(){
+    uploadWidgetButton.addEventListener("click", function(event) {
+        event.preventDefault()
         myWidget.open();
     }, false);

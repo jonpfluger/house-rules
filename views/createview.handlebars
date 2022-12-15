@@ -29,6 +29,9 @@
                         </select>
                     </div>
                     <div class="form-group mb-3 ms-2 ps-sm-5 text-start">
+                        {{#if img}}
+                            <img src="{{this.img}}" class="img-fluid rounded-start" alt="game img">
+                        {{/if}}    
                         <input name="game-img" placeholder="Upload image here" />
                         <button id="upload_widget" class="cloudinary_button">Upload image</button>
 
