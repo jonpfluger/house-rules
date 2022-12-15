@@ -1,5 +1,6 @@
 let headerAnimationsComplete = sessionStorage.getItem('headerAnimationsComplete')
 
+//runs animation for header and nav links and stores them in session storage
 document.addEventListener('DOMContentLoaded', () => {
     if (!headerAnimationsComplete) {
         sessionStorage.setItem('headerAnimationsComplete', true)
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-// working animation for cards
+// animation for every card
 anime({
     targets: '.animatedCard',
     scale: [
@@ -35,6 +36,8 @@ anime({
     ],
     delay: anime.stagger(200, { grid: [14, 5], from: 'center' })
 });
+
+//animation for board game cards
 anime({
     targets: '#boardGame',
     translateX: [-270, 0],
@@ -43,6 +46,8 @@ anime({
     },
     opacity: [0, 1]
   });
+  
+//animation for card game cards
   anime({
     targets: '#cardGame',
     translateX: [300, 0],
@@ -51,6 +56,8 @@ anime({
     },
     opacity: [0, 1]
   });
+
+  //animation for video game cards
   anime({
     targets: '#videoGame',
     translateY: [-270, 0],
