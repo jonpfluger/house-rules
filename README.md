@@ -16,6 +16,6 @@ Given a game review website, when I log in, then I can interact with other users
 
 ## Screenshot
 
-
+![A gaming webpage with a dark background and colorful navbar and posts.](public/assets/screenshot.png)
 
 ## Link
