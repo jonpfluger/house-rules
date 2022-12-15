@@ -1,6 +1,6 @@
 let headerAnimationsComplete = sessionStorage.getItem('headerAnimationsComplete')
 
-//runs animation for header and nav links and stores them in session storage
+// runs animation for header and nav links and stores them in session storage
 document.addEventListener('DOMContentLoaded', () => {
     if (!headerAnimationsComplete) {
         sessionStorage.setItem('headerAnimationsComplete', true)
