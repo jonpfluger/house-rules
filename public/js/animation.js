@@ -1,59 +1,5 @@
 let headerAnimationsComplete = sessionStorage.getItem('headerAnimationsComplete')
 
-// const boardBtn = document.getElementById('boardBtn')
-// const cardBtn = document.getElementById('cardBtn')
-// const videoBtn = document.getElementById('videoBtn')
-
-
-
-// function boardAni(event) {
-//     event.preventDefault()
-//     document.getElementById("boardBtn")
-// }
-
-// function cardAni(event) {
-//     event.preventDefault()
-//     document.getElementById("cardBtn")
-// }
-// function videoAni(event) {
-//     event.preventDefault()
-//     document.getElementById("videoBtn")
-// }
-
-
-// boardBtn.addEventListener('click', () => {
-//     anime({
-//         targets: '.animatedCard',
-//         translateX: [-270, 0],
-//         delay: (el, i) => {
-//             return 500 + 100 * i;
-//         },
-//         opacity: [0, 1]
-//       });
-// })
-
-// cardBtn.addEventListener('click', () => {
-//     anime({
-//         targets: '.animatedCard',
-//         translateX: [-270, 0],
-//         delay: (el, i) => {
-//             return 500 + 100 * i;
-//         },
-//         opacity: [0, 1]
-//       });
-// })
-
-// videoBtn.addEventListener('click', () => {
-//     anime({
-//         targets: '.animatedCard',
-//         translateX: [-270, 0],
-//         delay: (el, i) => {
-//             return 500 + 100 * i;
-//         },
-//         opacity: [0, 1]
-//       });
-// })
-
 document.addEventListener('DOMContentLoaded', () => {
     if (!headerAnimationsComplete) {
         sessionStorage.setItem('headerAnimationsComplete', true)
@@ -89,7 +35,28 @@ anime({
     ],
     delay: anime.stagger(200, { grid: [14, 5], from: 'center' })
 });
+anime({
+    targets: '#boardGame',
+    translateX: [-270, 0],
+    delay: (el, i) => {
+        return 500 + 100 * i;
+    },
+    opacity: [0, 1]
+  });
+  anime({
+    targets: '#cardGame',
+    translateX: [300, 0],
+    delay: (el, i) => {
+        return 500 + 100 * i;
+    },
+    opacity: [0, 1]
+  });
+  anime({
+    targets: '#videoGame',
+    translateY: [-270, 0],
+    delay: (el, i) => {
+        return 500 + 100 * i;
+    },
+    opacity: [0, 1]
+  });
 
-// boardBtn.addEventListener("click", boardAni);
-// cardBtn.addEventListener("click", cardAni);
-// videoBtn.addEventListener("click", videoAni)
