@@ -1,6 +1,7 @@
 const editReview = document.getElementById('editPost')
 const categorySelect = document.getElementById("category").options
 const categoryId = document.getElementById("categoryId")
+const imageBtn = document.getElementById("upload_widget")
 
 window.addEventListener("load", (event) => {
   let categoryid = categoryId.dataset.categoryid
@@ -13,15 +14,21 @@ window.addEventListener("load", (event) => {
 
 })
 
+let uploadCheck
+
+imageBtn.addEventListener('click', function() {
+  uploadCheck = true
+})
+
 const handleSubmit = (event) => {
   event.preventDefault()
-
+ 
   const {
     reviewTitle: reviewTitleInput,
     gameTitle: gameTitleInput,
     category: categorySelection,
     body: bodyInput,
-    image: imageUpload
+    upload_widget: imageInput
   } = event.target.elements
 
   const updatedPost = {
@@ -29,7 +36,7 @@ const handleSubmit = (event) => {
     gameTitle: gameTitleInput.value,
     category_id: categorySelection.value,
     body: bodyInput.value,
-    img: imageUpload.value
+    img: uploadCheck ? imgUrl : imageInput.dataset.imgurl
   }
 
   const reviewId = event.target.dataset.reviewid
